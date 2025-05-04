@@ -21,7 +21,7 @@ def send_sms(message):
 
 async def check_stock():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
+        browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
 
         await page.goto('https://www.tesla.com/tr_TR/modely/design#overview')
