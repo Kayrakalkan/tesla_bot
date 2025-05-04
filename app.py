@@ -38,7 +38,6 @@ async def check_stock():
         try:
             await page.wait_for_selector('button.tds-btn.aside-footer--button', timeout=5000)
             print("Stoklarda yok: 'Güncellemeleri Al' butonu mevcut.")
-            send_sms("🚗 Tesla Model Y Long Range Dört Çeker stokta yok :( !")
 
         except:
             print("Stoklarda var: 'Güncellemeleri Al' butonu bulunmuyor.")
